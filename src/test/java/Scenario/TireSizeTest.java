@@ -2,12 +2,15 @@ package Scenario;
 
 import Steps.ActionStep;
 import Steps.AssertionStep;
+import io.qameta.allure.*;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.Scanner;
 
+@DisplayName("Блок размеров шин")
 public class TireSizeTest {
 
     private WebDriver driver;
@@ -33,7 +36,11 @@ public class TireSizeTest {
     }
 
 
+
     @Test
+    @Flaky
+    @DisplayName("Кликабельность выпадшки для ширны шины")
+    @Issue("1")
     public void widthClickability() {
         assertionStep.hiddenWidthMenuItems();
         actionStep.clickWidthButton();
@@ -44,6 +51,8 @@ public class TireSizeTest {
     }
 
     @Test
+    @DisplayName("Выбор ширины шины")
+    @Description("Выбор значения ширины шины, сброс, перевыбор, запоминание значения после обновления страницы")
     public void selectWidth() {
         assertionStep.hiddenWidthMenuItems();
         actionStep.clickWidthButton();
@@ -53,6 +62,7 @@ public class TireSizeTest {
 
     @Ignore
     @Test
+    @DisplayName("Кликабельность поля выборы Высоты шины")
     public void heightClickability() {
 //Допишу позже
     }

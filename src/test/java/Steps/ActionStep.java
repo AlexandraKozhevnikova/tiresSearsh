@@ -19,12 +19,12 @@ public class ActionStep {
     }
 
 
-    @Step
+    @Step("Переход на страницу поиска шин")
     public void goToSearchTiresPage() {
         page.openTiresPage();
     }
 
-    @Step
+    @Step("Клик на поле выбора значения ширины шины")
     public void clickWidthButton() {
         page.clickDimensionButton(Dimension.WIDTH);
     }
