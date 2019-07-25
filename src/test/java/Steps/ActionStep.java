@@ -24,6 +24,9 @@ public class ActionStep {
         page.openTiresPage();
     }
 
+    @Step("Чекает тайтл")
+    public void checkTitle(){};
+
     @Step("Клик на поле выбора значения ширины шины")
     public void clickWidthButton() {
         page.clickDimensionButton(Dimension.WIDTH);

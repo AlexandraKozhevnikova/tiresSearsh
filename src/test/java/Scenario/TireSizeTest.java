@@ -18,7 +18,6 @@ public class TireSizeTest {
     private AssertionStep assertionStep;
 
     @Before
-
     public void prepare() {
         driver = new ChromeDriver();
         actionStep = new ActionStep(driver);
@@ -32,7 +31,6 @@ public class TireSizeTest {
             in.close();
             actionStep.bypassProtection(string);
         }
-
     }
 
 

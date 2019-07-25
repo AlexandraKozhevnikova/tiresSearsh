@@ -3,6 +3,7 @@ package Steps;
 import Test.PageObject.SelectionOfTiresPage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -18,9 +19,6 @@ public class AssertionStep {
     }
 
 
-
-
-
     @Step("Выпадашка \"Ширина, мм\" не пустая")
     public void notEmptyWidthMenuItems() {
         assertThat(page.getWidthMenuItems(), is(not(empty())));
@@ -34,20 +32,19 @@ public class AssertionStep {
 
         String stringExpected = page.getStringFromProperty("SetOfTiresWidth");
         String[] arrayExpected = stringExpected.split(", ");
-        assertThat(listActual,equalTo(Arrays.asList(arrayExpected)));
+        assertThat(listActual, equalTo(Arrays.asList(arrayExpected)));
     }
 
     @Step("Проверка, что выпадашка ширин отсутсвует на странице")
-    public void hiddenWidthMenuItems(){
-        assertThat(page.getWidthMenuItems(),empty());
+    public void hiddenWidthMenuItems() {
+        assertThat(page.getWidthMenuItems(), empty());
     }
 
     @Step("Значение ширины шины {0}")
-    public void selectedValueIsInTheField(String value){
+    public void selectedValueIsInTheField(String value) {
         page.selectItemOfList(page.getWidthMenuItems(), value);
         assertThat(page.getWidthButton().getText(), equalTo(value));
     }
-
 
 
 }
