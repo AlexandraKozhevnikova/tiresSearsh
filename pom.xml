@@ -10,7 +10,7 @@
 
 
     <properties>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <selelnium.version>3.141.59</selelnium.version>
         <hamcrest.version>2.1</hamcrest.version>
         <allure-junit4.version>2.12.1</allure-junit4.version>
